@@ -2,11 +2,6 @@ package starWars;
 
 public class Aprendiz extends Sith {
 
-	Aprendiz(int data, String nom, String sex, String esp, String epoch, String loc, String nomS) {
-		super(data, nom, sex, esp, epoch, loc, nomS);
-		
-	}
-
 	public void descricao() {
 		System.out.println("O Aprendiz na ordem Sith deve ser treinado por um Lorde, sendo que " + 
 				"um marco importante desse estagio era se o Aprendiz ja tinha conhecimento para " + 
