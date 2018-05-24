@@ -16,4 +16,6 @@ public abstract class SerVivo extends Objeto{
 		localDeNascimento = loc;
 	}
 	
+	abstract void InfosPessoais();
+	
 }
