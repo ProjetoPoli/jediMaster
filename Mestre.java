@@ -4,6 +4,42 @@ public class Mestre extends Jedi{
 	private boolean possuiVidencia;
 	private long tamanhoVidencia;
 	private boolean possuiImortalidade;
+	private int pontosDeVida;
+	private int dominioDaForca;
+	private int dominioDeSabre;
+	private Habilidade[] habilidades = new Habilidade[4];
+
+	public int getPontosDeVida() {
+		return pontosDeVida;
+	}
+
+	public void setPontosDeVida(int pontosDeVida) {
+		this.pontosDeVida = pontosDeVida;
+	}
+
+	public int getDominioDaForca() {
+		return dominioDaForca;
+	}
+
+	public void setDominioDaForca(int dominioDaForca) {
+		this.dominioDaForca = dominioDaForca;
+	}
+
+	public int getDominioDeSabre() {
+		return dominioDeSabre;
+	}
+
+	public void setDominioDeSabre(int dominioDeSabre) {
+		this.dominioDeSabre = dominioDeSabre;
+	}
+
+	public Habilidade[] getHabilidades() {
+		return habilidades;
+	}
+
+	public void setHabilidades(Habilidade[] habilidades) {
+		this.habilidades = habilidades;
+	}
 
 	public boolean isPossuiVidencia() {
 		return possuiVidencia;
