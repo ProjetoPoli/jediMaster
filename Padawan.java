@@ -1,10 +1,6 @@
 package starWars;
 
 public class Padawan extends Jedi {
-
-	public Padawan(int data, String nom, String sex, String esp, String epoch, String loc) {
-		super(data, nom, sex, esp, epoch, loc);
-	}
 	
 	public void descricao() {
 		System.out.println("Um Padawan na ordem Jedi deviam usar uma tranca quando tinham cabelo, sendo que um marco importante desse estagio era se o Padawan ja " + 
