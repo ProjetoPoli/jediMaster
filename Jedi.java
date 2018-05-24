@@ -1,10 +1,6 @@
 package starWars;
 
 public abstract class Jedi extends SerVivo{
-
-	Jedi(int data, String nom, String sex, String esp, String epoch, String loc) {
-		super(data, nom, sex, esp, epoch, loc);
-	}
 	
 	public void descricao() {
 		System.out.println("Na ordem Jedi deve-se " + 
