@@ -4,12 +4,30 @@ public class Mestre extends Jedi{
 	private boolean possuiVidencia;
 	private long tamanhoVidencia;
 	private boolean possuiImortalidade;
-	
-	Mestre(int data, String nom, String sex, String esp, String epoch, String loc, boolean vid, long TVid, boolean imort) {
-		super(data, nom, sex, esp, epoch, loc);
-		possuiVidencia = vid; tamanhoVidencia = TVid;
-		possuiImortalidade = imort;
-			}
+
+	public boolean isPossuiVidencia() {
+		return possuiVidencia;
+	}
+
+	public void setPossuiVidencia(boolean possuiVidencia) {
+		this.possuiVidencia = possuiVidencia;
+	}
+
+	public long getTamanhoVidencia() {
+		return tamanhoVidencia;
+	}
+
+	public void setTamanhoVidencia(long tamanhoVidencia) {
+		this.tamanhoVidencia = tamanhoVidencia;
+	}
+
+	public boolean isPossuiImortalidade() {
+		return possuiImortalidade;
+	}
+
+	public void setPossuiImortalidade(boolean possuiImortalidade) {
+		this.possuiImortalidade = possuiImortalidade;
+	}
 
 	public void descricao() {
 		System.out.println("O Mestre na ordem Jedi eh um Cavaleiro que adquiriu um campo de videncia ou a imortalidade.");

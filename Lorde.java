@@ -2,12 +2,6 @@ package starWars;
 
 public class Lorde extends Sith {
 
-	public Lorde(int data, String nom, String sex, String esp, String epoch, String loc, String nomS) {
-		super(data, nom, sex, esp, epoch, loc, nomS);
-		
-	}
-
-	@Override
 	void InfosPessoais() {
 		System.out.println("Esse eh o Lorde Sith " + nome + ", tambem conhecido por " + nomeSith
 				+ ", que nasceu em " + localDeNascimento + ", no ano " + anoDeNascimento + ' ' + epocaDeNascimento +'.');
