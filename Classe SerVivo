@@ -1,3 +1,5 @@
+package starWars;
+
 public abstract class SerVivo extends Objeto{
 	protected int anoDeNascimento;
 	protected String epocaDeNascimento;
@@ -12,11 +14,6 @@ public abstract class SerVivo extends Objeto{
 		especie = esp;
 		epocaDeNascimento = epoch;
 		localDeNascimento = loc;
-	}
-	
-}
-
-		especie = esp;
 	}
 	
 }
