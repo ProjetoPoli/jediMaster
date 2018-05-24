@@ -1,11 +1,11 @@
 package starWars;
 
 public abstract class Objeto {
-	private String nome;
+	protected String nome;
 	
 	Objeto (String nom) {
 		nome = nom;
 	}
 	
-	abstract public String descricao();
+	abstract public void descricao();
 }
