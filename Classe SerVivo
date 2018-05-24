@@ -1,0 +1,15 @@
+package starWars;
+
+public abstract class SerVivo extends Objeto{
+	private int anoDeNascimento;
+	private String sexo;
+	private String especie;
+	
+	SerVivo(int data, String nom, String sex, String esp) {
+		super(nom);
+		anoDeNascimento = data;
+		sexo = sex;
+		especie = esp;
+	}
+	
+}
