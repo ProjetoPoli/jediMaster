@@ -4,11 +4,21 @@ public class Cavaleiro extends Jedi{
 	
 	private int anoTornouCavaleiro;
 	private String epocaTornouCavaleiro;
-	
-	Cavaleiro(int data, String nom, String sex, String esp, String epoch, String loc, int anoC, String epochC) {
-		super(data, nom, sex, esp, epoch, loc);
-		anoTornouCavaleiro = anoC;
-		epocaTornouCavaleiro = epochC;
+
+	public int getAnoTornouCavaleiro() {
+		return anoTornouCavaleiro;
+	}
+
+	public void setAnoTornouCavaleiro(int anoTornouCavaleiro) {
+		this.anoTornouCavaleiro = anoTornouCavaleiro;
+	}
+
+	public String getEpocaTornouCavaleiro() {
+		return epocaTornouCavaleiro;
+	}
+
+	public void setEpocaTornouCavaleiro(String epocaTornouCavaleiro) {
+		this.epocaTornouCavaleiro = epocaTornouCavaleiro;
 	}
 
 	public void descricao() {
