@@ -2,9 +2,18 @@ package starWars;
 
 public class Habilidade extends Coisa {
 	
-	int danoBase;
-	int prioridade;
-	boolean ehForca;
+	private int danoBase;
+	private int prioridade;
+	private boolean ehForca;
+	private int danoTotal;
+	
+	public boolean isEhforca() {
+		return ehForca;
+	}
+
+	public void setEhforca(boolean ehForca) {
+		this.ehForca = ehForca;
+	}
 	
 	public int getDanoBase() {
 		return danoBase;
@@ -12,6 +21,10 @@ public class Habilidade extends Coisa {
 
 	public void setDanoBase(int danoBase) {
 		this.danoBase = danoBase;
+		if (!ehForca) {
+			danoTotal = danoBase*2;
+		}
+		else danoTotal = danoBase;
 	}
 
 	public int getPrioridade() {
@@ -21,13 +34,9 @@ public class Habilidade extends Coisa {
 	public void setPrioridade(int prioridade) {
 		this.prioridade = prioridade;
 	}
-
-	public boolean isEhforca() {
-		return ehForca;
-	}
-
-	public void setEhforca(boolean ehForca) {
-		this.ehForca = ehForca;
+	
+	public int getDanoTotal() {
+		return danoTotal;
 	}
 
 	public void descricao() {
@@ -36,7 +45,4 @@ public class Habilidade extends Coisa {
 		else System.out.print("sabre");
 		System.out.print(" com dano base de " + danoBase + "e prioridade" + prioridade + '.');	
 	}
-
-
-
 }
