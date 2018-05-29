@@ -5,7 +5,7 @@ public class Habilidade extends Coisa {
 	private int danoBase;
 	private int prioridade;
 	private boolean ehForca;
-	private int danoTotal;
+	private double danoTotal;
 	
 	public boolean isEhforca() {
 		return ehForca;
@@ -20,11 +20,7 @@ public class Habilidade extends Coisa {
 	}
 
 	public void setDanoBase(int danoBase) {
-		this.danoBase = danoBase;
-		if (!ehForca) {
-			danoTotal = danoBase*2;
-		}
-		else danoTotal = danoBase;
+		this.danoBase = danoBase % 51;
 	}
 
 	public int getPrioridade() {
@@ -32,11 +28,22 @@ public class Habilidade extends Coisa {
 	}
 
 	public void setPrioridade(int prioridade) {
-		this.prioridade = prioridade;
+		this.prioridade = prioridade % 101;
 	}
 	
-	public int getDanoTotal() {
+	public double getDanoTotal() {
 		return danoTotal;
+	}
+	
+	public void setDanoTotal(double danoTotal) {
+		this.danoTotal = danoTotal;
+	}
+	
+	public void construirHabilidade(String nom, int dB, int pri, boolean forca) {
+		this.nome = nom;
+		this.setDanoBase(dB);
+		this.setPrioridade(pri);
+		this.setEhforca(forca);
 	}
 
 	public void descricao() {

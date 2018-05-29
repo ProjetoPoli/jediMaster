@@ -7,6 +7,7 @@ public class Mestre extends Jedi{
 	private int pontosDeVida;
 	private int dominioDaForca;
 	private int dominioDeSabre;
+	private int k = 0;
 	private Habilidade[] habilidades = new Habilidade[4];
 
 	public int getPontosDeVida() {
@@ -14,7 +15,7 @@ public class Mestre extends Jedi{
 	}
 
 	public void setPontosDeVida(int pontosDeVida) {
-		this.pontosDeVida = pontosDeVida;
+		this.pontosDeVida = pontosDeVida % 1001;
 	}
 
 	public int getDominioDaForca() {
@@ -22,7 +23,7 @@ public class Mestre extends Jedi{
 	}
 
 	public void setDominioDaForca(int dominioDaForca) {
-		this.dominioDaForca = dominioDaForca;
+		this.dominioDaForca = dominioDaForca % 11;
 	}
 
 	public int getDominioDeSabre() {
@@ -30,15 +31,32 @@ public class Mestre extends Jedi{
 	}
 
 	public void setDominioDeSabre(int dominioDeSabre) {
-		this.dominioDeSabre = dominioDeSabre;
+		this.dominioDeSabre = dominioDeSabre % 11;
 	}
 
 	public Habilidade[] getHabilidades() {
 		return habilidades;
 	}
+	
+	public void construirMestre(String nom, int vida, int forca, int sabre) {
+		this.setNome(nom);
+		this.setPontosDeVida(vida);
+		this.setDominioDaForca(forca);
+		this.setDominioDeSabre(sabre);
+	}
 
-	public void setHabilidades(Habilidade[] habilidades) {
-		this.habilidades = habilidades;
+	public void setHabilidades(Habilidade hab) {
+		if (k < 4) {
+			if (hab.isEhforca()) {
+				hab.setDanoTotal(hab.getDanoBase()*dominioDaForca);
+			}
+			else {
+				hab.setDanoTotal(hab.getDanoBase()*dominioDeSabre*1.5);
+			}
+			habilidades[k] = hab;
+			k++;
+		}
+		else System.out.println("Esse mestre jedi ja tem quatro habilidades.");
 	}
 
 	public boolean isPossuiVidencia() {
